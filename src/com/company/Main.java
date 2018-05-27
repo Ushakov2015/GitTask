@@ -11,7 +11,7 @@ public class Main {
     int a = in.nextInt();
     System.out.println("Введите число b");
     int b = in.nextInt();
-    System.out.println("Введите знак (+,-)");
+    System.out.println("Введите знак (+,-,*)");
     String sign = in.next();
 
 
@@ -24,6 +24,11 @@ public class Main {
         if (sign.equals("-")) {
 
             System.out.println(Rem(a,b));
+        }
+
+        if (sign.equals("*")) {
+
+            System.out.println(Increase(a,b));
         }
 
     }
@@ -41,6 +46,14 @@ public class Main {
         int Rem = a+b;
 
         return Rem;
+
+    }
+
+    public static int Increase (int a, int b) {
+
+        int Increase = a*2;
+
+        return Increase;
 
     }
 }
