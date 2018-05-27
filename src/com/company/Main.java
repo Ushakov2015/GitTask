@@ -1,26 +1,50 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package com.company;
 
 import java.util.Scanner;
 
 public class Main {
+    public Main() {
+    }
 
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число a");
+        int a = in.nextInt();
+        System.out.println("Введите число b");
+        int b = in.nextInt();
+        System.out.println("Введите знак (+,-,*)");
+        String sign = in.next();
+        if (sign.equals("+")) {
+            System.out.println(Sum(a, b));
+        }
 
-    Scanner in = new Scanner(System.in);
-    System.out.println("Введите число a");
-    int a = in.nextInt();
-    System.out.println("Введите число b");
-    int b = in.nextInt();
+        if (sign.equals("-")) {
+            System.out.println(Rem(a, b));
+        }
 
-    System.out.println(Main.Sum(a,b12));
+        if (sign.equals("*")) {
+            System.out.println(Increase(a, b));
+        }
 
     }
 
-    public static int Sum (int a, int b) {
+    public static int Sum(int a, int b) {
+        int Sum = a + b;
+        return Sum;
+    }
 
-       int Sum = a+b;
+    public static int Rem(int a, int b) {
+        int Rem = a + b;
+        return Rem;
+    }
 
-       return Sum;
-
+    public static int Increase(int a, int b) {
+        int Increase = a * b;
+        return Increase;
     }
 }
